@@ -40,4 +40,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')))
 app.use(require('./routes.js'))
 
 // Server habilita a API a receber requisições http e HS (sockets), pra realizar a atualização dos usuarios abertos realtime
-server.listen(8080)
+server.listen(process.env.PORT || 8080)
